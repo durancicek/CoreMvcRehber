@@ -1,0 +1,35 @@
+﻿@model Entities.Kisi
+
+
+@using (Html.BeginForm("Create", "Kisi", FormMethod.Post))
+{
+<div class="form-group row">
+    <label asp-for="Ad" class="col-md-3 col-form-label"></label>
+    <input asp-for="Ad" value="" class="form-control" />
+    <label asp-for="Soyad" class="col-md-3 col-form-label"></label>
+    <input asp-for="Soyad" value="" class="form-control" />
+    <label asp-for="Firma" class="col-md-3 col-form-label"></label>
+    <input asp-for="Firma" value="" class="form-control" />
+    <label asp-for="CepTelefon" class="col-md-3 col-form-label"></label>
+    <input asp-for="CepTelefon" value="" class="form-control" />
+    <label asp-for="SabitTelefon" class="col-md-3 col-form-label"></label>
+    <input asp-for="SabitTelefon" value="" class="form-control" />
+    <label asp-for="Email" class="col-md-3 col-form-label"></label>
+    <input asp-for="Email" value="" class="form-control" />
+    <label asp-for="Adres" class="col-md-3 col-form-label"></label>
+    <input asp-for="Adres" value="" class="form-control" />
+    <label asp-for="il" class="col-md-3 col-form-label"></label>
+    <input asp-for="il" value="" class="form-control" />
+    <label asp-for="ilce" class="col-md-3 col-form-label"></label>
+    <input asp-for="ilce" value="" class="form-control" />
+
+
+</div>
+
+    <div class="form-group row">
+
+        <input type="submit" class="btn btn-primary" onclick="return validateData()" />
+    </div>
+
+
+}

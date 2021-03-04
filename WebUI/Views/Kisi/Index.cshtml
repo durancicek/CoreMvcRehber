@@ -1,0 +1,67 @@
+﻿@model List<Entities.Kisi>
+@*<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>*@
+
+
+<h3 class="text-info">Kişiler Listesi</h3>
+<br />
+<a asp-action="Yeni" asp-controller="Kisi" class="btn btn-info" style="background-color:#17a2b8"> <i class="fas fa-plus-square"></i> Yeni Kayıt Ekle</a>
+<br />
+<br />
+
+<table id="tbl1" class="table table-hover text-center">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Ad</th>
+            <th>Soyad</th>
+            <th>Firma</th>
+            <th></th>
+            <th></th>
+        </tr>
+
+    </thead>
+
+
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.ID</td>
+                <td>@item.Ad</td>
+                <td>@item.Soyad</td>
+                <td>@item.Firma</td>
+
+                <td><a asp-action="Detay" asp-controller="Kisi" class="btn btn-warning" asp-route-id="@item.ID"><i class="fas fa-pen-fancy"></i>Detay</a></td>
+
+                @*<td><a asp-action="Update" asp-controller="Kisi" class="btn btn-success" style="padding:1px 10px" asp-route-id="@item.ID"><i class="fas fa-pen-fancy"></i>Güncelle</a></td>*@
+
+                <td>
+                    <form asp-action="Delete" asp-controller="Kisi" method="post" asp-route-id="@item.ID">
+                        <button type="submit" class="btn btn-danger"><i class="far fa-trash-alt"></i>Sil</button>
+                    </form>
+                </td>
+            </tr>
+
+        }
+
+    </tbody>
+
+
+</table>
+
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<link href="~/DataTables/DataTables-1.10.23/css/jquery.dataTables.css" rel="stylesheet" />
+<script src="~/DataTables/DataTables-1.10.23/js/jquery.dataTables.js"></script>
+
+<script>
+    $('#tbl1').DataTable({
+
+        "language": {
+            "url": "//cdn.datatables.net/plug-ins/1.10.12/i18n/Turkish.json"
+        }
+    });
+</script>
+
+

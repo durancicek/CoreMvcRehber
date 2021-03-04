@@ -1,0 +1,40 @@
+﻿@model Entities.Kisi
+
+<br />
+<h5>Kişi Detay</h5>
+<br />
+
+@using (Html.BeginForm("Update", "Kisi", FormMethod.Post))
+{
+    <input type="hidden" name="Id" value="@Model.ID" />
+    <div class="form-group row">
+        <label asp-for="Ad" class="col-md-3 col-form-label"></label>
+        <input asp-for="Ad" value="@Model.Ad" class="form-control" />
+        <label asp-for="Soyad" class="col-md-3 col-form-label"></label>
+        <input asp-for="Soyad" value="@Model.Soyad" class="form-control" />
+        <label asp-for="Firma" class="col-md-3 col-form-label"></label>
+        <input asp-for="Firma" value="@Model.Firma" class="form-control" />
+        <label asp-for="CepTelefon" class="col-md-3 col-form-label"></label>
+        <input asp-for="CepTelefon" value="@Model.CepTelefon" class="form-control" />
+        <label asp-for="SabitTelefon" class="col-md-3 col-form-label"></label>
+        <input asp-for="SabitTelefon" value="@Model.SabitTelefon" class="form-control" />
+        <label asp-for="Email" class="col-md-3 col-form-label"></label>
+        <input asp-for="Email" value="@Model.Email" class="form-control" />
+        <label asp-for="Adres" class="col-md-3 col-form-label"></label>
+        <input asp-for="Adres" value="@Model.Adres" class="form-control" />
+        <label asp-for="il" class="col-md-3 col-form-label"></label>
+        <input asp-for="il" value="@Model.il" class="form-control" />
+        <label asp-for="ilce" class="col-md-3 col-form-label"></label>
+        <input asp-for="ilce" value="@Model.ilce" class="form-control" />
+
+    </div>
+    <button type="submit" class="btn btn-success"><i class="far fa-trash-alt"></i>Güncelle</button>
+    @Html.ActionLink("Listeye Geri Dön", "Index")
+}
+
+
+
+
+
+
+
