@@ -12,7 +12,7 @@ namespace DataAccess.Concreat.EFCore.MsSql
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer(@"Server=(localdb)\mssqllocaldb;Database=TelRehber");
+            optionsBuilder.UseSqlServer(@"Server=(localdb)\mssqllocaldb;Database=TelRehber"); 
         }
 
 
